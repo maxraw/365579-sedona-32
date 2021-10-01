@@ -5,8 +5,141 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <div class="container">
+      <header class="page-header">
+        <nav>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="index.html" >Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#" >О Седоне</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="hotels.html" >Гостиницы</a>
+            </li>
+          </ul>
+          <div class="logo">
+            <h1 class="visually-hidden">Седона</h1>
+            <a href="index.html" class="logo-link"><img class="logo-image" src="#" alt="Логотип Седона"></a>
+          </div>
+          <ul class="navigation-list navigation-user">
+            <li class="navigation-item">
+              <a class="navigation-link" href="about.html" >
+                <span class="visually-hidden">Поиск</span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="about.html" >
+                <span class="visually-hidden">Избранное</span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="about.html" >Гостиницы</a>
+            </li>
+          </ul>
+          <button>Хочу сюда!</button>
+        </nav>
+          
+      </header>
+      <main class="main-index">
+        <section class="description">
+          <!-- Тут все таки будет текст или фон со спрайтовым изображением? -->
+          <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</span>
+        </section>
+        <section class="advantages">
+          <div class="advantages-list">
+            <h2 class="visually-hidden">Преимущества</h2>
+            <div class="advantages-item">
+              <h2>Настоящий городок</h2>
+              <span>— №1 —</span>
+              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <div class="advantages-image-city"></div>
+            <div class="advantages-item">
+              <img src="#" alt="">
+              <h2>Жильё</h2>
+              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </div>
+            <div class="advantages-item">
+              <img src="#" alt="">
+              <h2>Еда</h2>
+              <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            </div>
+            <div class="advantages-item">
+              <img src="#" alt="">
+              <h2>Сувениры</h2>
+              <p>Не только китайского, но и настоящего местного производства!</p>
+            </div>
+            <div class="advantages-item">
+              <h2>Там есть мост дьявола</h2>
+              <span>— №2 —</span>
+              <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+            <div class="advantages-image-canyon"></div>
+            <div class="advantages-item">
+              <img src="#" alt="">
+              <h2>Небольшая площадь</h2>
+              <span>— №3 —</span>
+              <p>Все достопримечательности находятся очень близко</p>
+            </div>
+            <div class="advantages-item">
+              <img src="#" alt="">
+              <h2>Красивая дорога</h2>
+              <span>— №4 —</span>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+            <div class="advantages-item">
+              <img src="#" alt="">
+              <h2>Мало туристов</h2>
+              <span>— №5 —</span>
+              <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
+          </div>
+      </section>
+      <section class="search">
+        <h2 class="search-caption">Заинтересовались?</h2>
+        <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="search-button" type="button">поиск гостиницы в седоне</button>
+      </section>
+      <section class="subscription">
+        <h2 class="subscription-caption">Подпишитесь на рассылку</h2>
+        <p class="subscription-description">Только полезная информация и никакого спама,честное бойскаутское!</p>
+        <form class="subscription-form" action="#" method="post">
+         <label class="visually-hidden" for="subscription-email">Email</label>
+         <input class="field"  placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
+         <button class="button newsletter-button" type="submit">Подписаться</button>
+        </form>
+      </section>
+      </main>  
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+      <footer class="page-footer">
+        <section class="footer-social">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+          </ul>
+          <a href="tel:+78128121212" class="footer-tel">+7 (812) 812-12-12</a>
+        <div class="footer-logo">
+            <h1 class="visually-hidden">html Academy</h1>
+            <a href="#" class="footer-logo-link"><img class="footer-logo-image" src="#" alt="Логотип HTML Academy"></a>
+          </div>
+      </section>
+      </footer>
+    </div>
   </body>
 </html>
