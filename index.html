@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="css\style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,92 +23,132 @@
           </li>
         </ul>
         <div class="logo">
-          <h1 class="visually-hidden">Седона</h1>
-          <a href="index.html" class="logo-link"><img class="logo-image" src="#" alt="Логотип Седона"></a>
+          <h2 class="visually-hidden">Седона</h2>
+          <a href="index.html" class="logo-link">
+            <img class="logo-image" src="images\logo-sedona.svg" width="138" height="70.05" alt="Логотип Седона">
+          </a>
         </div>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="about.html">
               <span class="visually-hidden">Поиск</span>
+              <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)">
+                  <path
+                    d="m18 16.5-3.7-3.7c1-1.3 1.7-3 1.7-4.9 0-4.4-3.6-8-8-8S0 3.6 0 8c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l3.7 3.7 1.4-1.5ZM8 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6Z"
+                    fill="#000" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h18v18H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="about.html">
               <span class="visually-hidden">Избранное</span>
+              <svg width="31" height="27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.9 27a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 10c1.3 0 2.5.5 3.5 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"
+                  fill="#000" />
+                <path d="M31 9.5a9.5 9.5 0 1 1-19 0 9.5 9.5 0 0 1 19 0Z" fill="#7DB54F" />
+                <path
+                  d="M17.63 12.26h1.4V7.42l.1-.59-.4.47-1.1.79-.38-.51 2.2-1.7h.36v6.38h1.37V13h-3.55v-.74Zm7.83-4.67c0 .35-.07.72-.2 1.09a10.88 10.88 0 0 1-1.21 2.21c-.26.35-.52.69-.78 1.01l-.49.43v.04l.64-.11h2.18V13h-3.98v-.29a33.15 33.15 0 0 0 1.17-1.32 15.09 15.09 0 0 0 1.25-1.83c.18-.32.32-.64.43-.95.1-.31.16-.61.16-.89 0-.33-.1-.6-.28-.81-.19-.22-.47-.33-.85-.33-.25 0-.5.05-.74.16-.24.1-.45.22-.62.35l-.33-.57c.23-.2.51-.36.83-.47.32-.11.66-.17 1.03-.17.29 0 .54.04.76.13a1.5 1.5 0 0 1 .91.9c.08.2.12.43.12.68Z"
+                  fill="#fff" />
+              </svg>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="about.html">Гостиницы</a>
-          </li>
         </ul>
-        <button>Хочу сюда!</button>
+        <button class="navigation-button" type="button">Хочу сюда!</button>
       </nav>
     </header>
     <main class="main-index">
+      <div class="index-promo">
+        <img src="images\welcome-index.svg" width="458" height="352" alt="Привет великолепная Седона!"
+          class="index-promo-image">
+      </div>
       <section class="description">
-        <!-- Тут все таки будет текст или фон со спрайтовым изображением? -->
-        <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-        <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</span>
+        <div class="description-container">
+          <h1 class="description-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <span class="description-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</span>
+        </div>
       </section>
       <section class="advantages">
-        <div class="advantages-list">
-          <h2 class="visually-hidden">Преимущества</h2>
-          <div class="advantages-item">
-            <h2>Настоящий городок</h2>
-            <span>— №1 —</span>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          </div>
-          <div class="advantages-image-city"></div>
-          <div class="advantages-item">
-            <img src="#" alt="">
-            <h2>Жильё</h2>
-            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-          </div>
-          <div class="advantages-item">
-            <img src="#" alt="">
-            <h2>Еда</h2>
-            <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-          </div>
-          <div class="advantages-item">
-            <img src="#" alt="">
-            <h2>Сувениры</h2>
-            <p>Не только китайского, но и настоящего местного производства!</p>
-          </div>
-          <div class="advantages-item">
-            <h2>Там есть мост дьявола</h2>
-            <span>— №2 —</span>
-            <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          </div>
-          <div class="advantages-image-canyon"></div>
-          <div class="advantages-item">
-            <img src="#" alt="">
-            <h2>Небольшая площадь</h2>
-            <span>— №3 —</span>
-            <p>Все достопримечательности находятся очень близко</p>
-          </div>
-          <div class="advantages-item">
-            <img src="#" alt="">
-            <h2>Красивая дорога</h2>
-            <span>— №4 —</span>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </div>
-          <div class="advantages-item">
-            <img src="#" alt="">
-            <h2>Мало туристов</h2>
-            <span>— №5 —</span>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
-          </div>
+        <h3 class="visually-hidden">Преимущества</h3>
+        <div class="advantages-item advantages-item-city">
+          <h2 class="advantages-item-title">Настоящий городок</h2>
+          <span>— №1 —</span>
+          <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <div class="advantages-image-city">
+          <img src="images\city-sedona.jpg" width="800" height="384" alt="Город Седона">
+        </div>
+        <div class="advantages-item advantages-item-housing">
+          <svg width="75" height="72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.7 65h16V41.2h-16V65Zm2.9-20.9h10.1v18H32.6v-18Z" fill="#81B3D2" />
+            <path
+              d="m72.8 39.3 2.1-2.1-9.9-9.9V0H51.1v13.6L37.5 0 .2 37.2l2.1 2.1 7.8-7.8v37.6h-4V72H70v-2.9h-5.1V31.5l7.9 7.8ZM62 69.1H13V28.5L37.5 4.1 62 28.5v40.6Zm0-44.7-7.9-7.9V2.9H62v21.5Z"
+              fill="#81B3D2" />
+            <path
+              d="M29.9 27.1c0 4.3 3.5 7.7 7.7 7.7 4.3 0 7.8-3.5 7.8-7.7 0-4.3-3.5-7.7-7.8-7.7a7.7 7.7 0 0 0-7.7 7.7Zm7.8-5a5 5 0 0 1 5 4.9c0 2.7-2.2 4.9-5 4.9a5 5 0 0 1-5-4.9c0-2.7 2.2-4.9 5-4.9ZM20.1 41.2h-3v3.9h3v-3.9ZM26 41.2h-3v3.9h3v-3.9ZM20.1 47.2h-3v3.9h3v-3.9ZM26 47.2h-3v3.9h3v-3.9ZM52 41.2h-3v3.9h3v-3.9ZM57.9 41.2h-3v3.9h3v-3.9ZM52 47.2h-3v3.9h3v-3.9ZM57.9 47.2h-3v3.9h3v-3.9Z"
+              fill="#81B3D2" />
+          </svg>
+          <h2 class="advantages-item-title">Жильё</h2>
+          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        </div>
+        <div class="advantages-item advantages-item-food">
+          <svg width="74" height="70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M69.9 46.7H4.1C1.8 46.7 0 48.6 0 51v3.5c0 2.4 1.9 4.3 4.1 4.3H5v1.1C5 65.4 9.3 70 14.6 70h44.6c5.3 0 9.6-4.5 9.6-10.1v-1.1h.9c2.3 0 4.1-1.9 4.1-4.3V51a4 4 0 0 0-3.9-4.3ZM66 59.9c0 3.9-3 7-6.7 7H14.6c-3.7 0-6.7-3.2-6.7-7v-1.1H66v1.1Zm5.1-5.4c0 .7-.6 1.3-1.2 1.3H4c-.7 0-1.2-.6-1.2-1.3V51c0-.7.6-1.3 1.2-1.3h65.8c.7 0 1.2.6 1.2 1.3.1 0 .1 3.5.1 3.5ZM15.6 38.4l5.4 4.1 5.3-4.1 5.3 4.1 5.3-4.1 5.4 4.1 5.3-4.1 5.3 4.1 5.4-4.1 5.3 4.1 6.2-4.7-1.7-2.5-4.5 3.4-5.3-4.1-5.4 4.1-5.3-4.1-5.3 4.1-5.4-4.1-5.3 4.1-5.3-4.1-5.3 4.1-5.4-4.1-5.3 4.1-4.5-3.4-1.7 2.5 6.2 4.7 5.3-4.1ZM8 31.5h60.8c0-.6.1-1.2.1-1.9v-1.2C68.2 12.7 54.2 0 37 0 19.7 0 5.7 12.7 5 28.5v1.2c0 .6 0 1.3.1 1.9H8v-.1ZM37 3c15.6 0 28.4 11.3 29 25.5H8C8.6 14.4 21.4 3 37 3Z"
+              fill="#81B3D2" />
+            <path
+              d="M37 17.3c1.05 0 1.9-.9 1.9-2s-.85-2-1.9-2c-1.05 0-1.9.9-1.9 2s.85 2 1.9 2ZM29.2 12.2c1.05 0 1.9-.9 1.9-2s-.85-2-1.9-2c-1.05 0-1.9.9-1.9 2s.85 2 1.9 2ZM44.7 12.2c1.05 0 1.9-.9 1.9-2s-.85-2-1.9-2c-1.05 0-1.9.9-1.9 2s.85 2 1.9 2Z"
+              fill="#81B3D2" />
+          </svg>
+          <h2 class="advantages-item-title">Еда</h2>
+          <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+        <div class="advantages-item advantages-item-gifts">
+          <img src="images\icons\gift-icon.svg" alt="Сувениры в Седоне">
+          <h2 class="advantages-item-title">Сувениры</h2>
+          <p>Не только китайского, но и настоящего местного производства!</p>
+        </div>
+        <div class="advantages-image-canyon">
+          <img src="images\canyon.jpg" width="800" height="384" alt="Каньон в Седоне">
+        </div>
+        <div class="advantages-item advantages-item-bridge">
+          <h2 class="advantages-item-title">Там есть мост дьявола</h2>
+          <span>— №2 —</span>
+          <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+        </div>
+        <div class="advantages-item advantages-item-area">
+          <h2 class="advantages-item-title">Небольшая площадь</h2>
+          <span>— №3 —</span>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="advantages-item advantages-item-road">
+          <h2 class="advantages-item-title">Красивая дорога</h2>
+          <span>— №4 —</span>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="advantages-item advantages-item-few">
+          <h2 class="advantages-item-title">Мало туристов</h2>
+          <span>— №5 —</span>
+          <p>Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </section>
       <section class="search">
         <h2 class="search-caption">Заинтересовались?</h2>
-        <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
+        <p class="search-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
+          гостиниц
           в Седоне</p>
         <button class="search-button" type="button">поиск гостиницы в седоне</button>
       </section>
       <section class="subscription">
         <h2 class="subscription-caption">Подпишитесь на рассылку</h2>
-        <p class="subscription-description">Только полезная информация и никакого спама,честное бойскаутское!</p>
+        <p class="subscription-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="subscription-form" action="#" method="post">
           <label class="visually-hidden" for="subscription-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
@@ -123,23 +164,56 @@
           <li class="footer-social-item">
             <a class="button" href="#">
               <span class="visually-hidden">Твиттер</span>
+              <svg width="18" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)">
+                  <path
+                    d="M11.6.2c1.8-.5 3.2.3 3.8 1.2.7-.2 1.4-.5 2.1-.7 0 .9-.6 1.5-.9 1.8.7.1 1.4-.6 1.4-.6-.2 1-1.1 1.8-1.7 2C16.1 10.7 13 15.1 5.7 15h-.5c-.4 0-4.4-.5-5.2-1.9 2.4.2 4.1-.4 5-1.2-1-.3-2.9-.4-3.2-2.9.4.1.6.2 1.3.1C1.8 8.3.4 7.5.5 5.3c.3.3 1.1.5 1.4.5C1.1 5.6-.2 2.5.9.9c1.9 1.9 4 3.6 7.6 3.8C8.7 2.3 9.7.8 11.6.2Z"
+                    fill="#83B3D3" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h18v15H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="#">
-              <span class="visually-hidden">ВКонтакте</span>
+              <span class="visually-hidden">Фейсбук</span>
+              <svg width="10" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.8 0 3 1.8 3 4v2H0v4h3v8h4v-8h3V6H7V4h3V0H7Z" fill="#83B3D3" />
+              </svg>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="#">
-              <span class="visually-hidden">Инстаграм</span>
+              <span class="visually-hidden">Ютуб</span>
+              <svg width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)">
+                  <path
+                    d="M17 0H2.9C1.2 0 0 1.5 0 3.2v9.5C0 14.5 1.2 16 2.9 16h14.3c1.5 0 2.9-1.5 2.9-3.2V3.2C19.9 1.5 18.7 0 17 0ZM7 11.8V4.2L13.7 8 7 11.8Z"
+                    fill="#83B3D3" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h20v16H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
             </a>
           </li>
         </ul>
         <a href="tel:+78128121212" class="footer-tel">+7 (812) 812-12-12</a>
         <div class="footer-logo">
-          <h1 class="visually-hidden">html Academy</h1>
-          <a href="#" class="footer-logo-link"><img class="footer-logo-image" src="#" alt="Логотип HTML Academy"></a>
+          <h2 class="visually-hidden">html Academy</h2>
+          <a href="#" class="footer-logo-link">
+            <svg width="115" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"
+                fill="#000" />
+            </svg>
+          </a>
         </div>
       </section>
     </footer>
