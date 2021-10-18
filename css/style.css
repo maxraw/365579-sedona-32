@@ -30,12 +30,12 @@
 }
 
 body {
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: #E5E5E5;
   color: #333333;
-
 }
 
 .container {
@@ -52,8 +52,33 @@ body {
   background-color: #FFFFFF;
 }
 
-.navigation-item {
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding-left: 0;
+  width: 250px;
+}
+
+.navigation-item,
+.navigation-item-user {
+  margin-left: 33px;
   list-style-type: none;
+}
+
+.navigation-item-user {
+  margin-left: 33px;
 }
 
 .navigation-link {
@@ -66,7 +91,29 @@ body {
   text-decoration: none;
 }
 
+.counter::after {
+  position: absolute;
+  top: 10px;
+  right: 278px;
+  content: "12";
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  background-size: 19px;
+  border-radius: 50%;
+  padding: 3px;  
+}
+
+.logo {
+  margin-left: 80px;
+}
+
 .navigation-button {
+  margin-right: 72px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   width: 160px;
   height: 37px;
   font-weight: 700;
@@ -76,15 +123,18 @@ body {
   text-transform: uppercase;
   background-color: #756257;
   border-radius: 4px;
+  color:#FFFFFF;
 }
 
 .main-index {
+  margin-top: -10px;
   color: #000000;
   background-color: #FFFFFF;
 }
 
 .index-promo {
-  background-image: url(../images/index-background.jpg);
+  background-image: url(../images/index-background.jpg),
+  url(../images/divider.jpg);
   width: 1200px;
   height: 485px;
   text-align: center;
@@ -92,7 +142,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.index-promo-image {
+  margin-top: 51px;
+  margin-bottom: 83px;
+}
+
 .description {
+  padding-top: 63px;
+  padding-bottom: 79px;
   text-align: center;
   background: #FFFFFF;
 }
@@ -115,7 +172,18 @@ body {
   text-align: center;
 }
 
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .advantages-item {
+  margin: 0;
+  padding: 0;
   width: 400px;
   height: 384px;
 }
@@ -128,6 +196,7 @@ body {
   text-align: center;
   color: #FFFFFF;
   background-color: #83B3D3;
+  
 }
 
 .advantages-item-housing,
@@ -153,10 +222,44 @@ body {
 }
 
 .advantages-item-title {
+  margin: 0;
+  padding: 0;
+  padding-top: 98px;
+  padding-bottom: 25px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+.item-title-housing,
+.item-title-food,
+.item-title-gifts {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.advantages-item-description {
+  max-width: 226px;
+  margin-left: 90px;
+}
+
+.advantages-description {
+  max-width: 250px;
+  margin-left: 90px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+}
+
+.advantages-item-icon {
+  margin-top: 89px;
 }
 
 .search {
@@ -166,6 +269,8 @@ body {
 }
 
 .search-caption {
+  margin: 0;
+  margin-top: 91px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -183,6 +288,8 @@ body {
 }
 
 .search-button {
+  margin-top: 73px;
+  margin-bottom: 91px;
   width: 575px;
   height: 60px;
   background-color: #756257;
@@ -204,6 +311,12 @@ body {
   line-height: 26px;
   text-align: center;
   color: #FFFFFF;
+}
+
+.subscription-caption {
+  margin: 0;
+  padding: 0;
+  padding-top: 94px;
 }
 
 .field {
@@ -236,15 +349,23 @@ body {
 }
 
 .page-footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
   background-color: #FFFFFF;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-social-list {
+  display: flex;
   margin: 0;
-  height: 120px;
 }
 
 .footer-social-item {
+  margin-left: 29px;
   text-align: left;
   list-style-type: none;
   text-decoration: none;
@@ -258,6 +379,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+}
+
+.footer-logo {
+  margin-right: 45px;
 }
 
 /* Начало стилей страницы каталога */
@@ -367,6 +492,11 @@ body {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+}
+
+.catalog-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog-card {
