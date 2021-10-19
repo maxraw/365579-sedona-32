@@ -412,9 +412,14 @@ body {
 }
 
 .menu-catalog {
+  display: flex;
   margin-top: 0;
   padding-left: 73px;
   list-style-type: none;
+}
+
+.menu-catalog-item {
+  margin-right: 10px;
 }
 
 .menu-catalog-link {
@@ -423,6 +428,11 @@ body {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
+}
+
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-filter-group {
@@ -482,11 +492,6 @@ body {
   background: inherit;
 }
 
-/*Добавил чтобы не слипалось с предыдущей секцией, в последствии margin=250px уберу*/
-.sorting {
-  margin-top: 250px;
-}
-
 .catalog {
   font-weight: 400;
   font-size: 18px;
@@ -500,10 +505,14 @@ body {
 }
 
 .catalog-card {
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
 }
 
 .catalog-card-title {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
@@ -556,6 +565,9 @@ body {
 }
 
 .pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
   background-color: #E5E5E5;
 }
 
