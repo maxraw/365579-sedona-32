@@ -80,7 +80,7 @@
           </li>
         </ul>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group filter-group-checkbox">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
 
             <input class="catalog-filter-checkbox" type="checkbox" id="pool" name="infrastructure" checked>
@@ -92,7 +92,7 @@
             <input class="catalog-filter-checkbox" type="checkbox" id="wifi" name="infrastructure">
             <label class="catalog-filter-item" for="wifi">Wi-Fi</label>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group filter-group-radio">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <!-- Допустимо ли такое name у input? -->
             <input class="catalog-filter-radio" type="radio" id="hotel" name="type-of-housing" checked>
@@ -104,7 +104,7 @@
             <input class="catalog-filter-radio" type="radio" id="apartments" name="typeofhousing">
             <label class="catalog-filter-item" for="apartments">Апартаменты</label>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group filter-group-toggle">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <button class="range-toggle toggle-min" type="button">
               <span class="visually-hidden">Изменить минимальную цену.</span>
@@ -122,8 +122,10 @@
             </label>
 
           </fieldset>
-          <button class="button-show" type="submit">Применить</button>
-          <button class="button-cancel" type="reset">Сбросить</button>
+          <div class="catalog-filter-button">
+            <button class="button-show" type="submit">Применить</button>
+            <button class="button-cancel" type="reset">Сбросить</button>
+          </div>
         </form>
       </section>
       <section class="sorting">
@@ -131,20 +133,25 @@
         <form class="sorting-type">
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap">Сначала дешёве</option>
-            <option value="expensive">Сначала дорогие</option>
+            <option class="select-control-value" value="popular">Сначала популярные</option>
+            <option class="select-control-value" value="cheap">Сначала дешёвые</option>
+            <option class="select-control-value" value="expensive">Сначала дорогие</option>
           </select>
         </form>
-        <a href="#" class="button">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a href="#" class="button button-light">
-          <span class="visually-hidden">Крупные значки</span>
-        </a>
-        <a href="#" class="button button-light">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <div class="sorting-type-view">
+          <a href="#" class="sorting-button button">
+            <span class="visually-hidden">Показать карточки</span>
+            <img src="images\icons\mode-tile.svg" alt="Плитка" class="sorting-type-icon">
+          </a>
+          <a href="#" class="sorting-button button">
+            <span class="visually-hidden">Крупные значки</span>
+            <img src="images\icons\mode-slideshow.svg" alt="Слайдшоу" class="sorting-type-icon">
+          </a>
+          <a href="#" class="sorting-button button">
+            <span class="visually-hidden">Показать список</span>
+            <img src="images\icons\mode-list.svg" alt="Список" class="sorting-type-icon sorting-icon-light">
+          </a>
+        </div>
       </section>
       <section class="catalog">
         <ul class="catalog-list">
@@ -153,15 +160,29 @@
               <img class="catalog-card-image amara" src="images\hotels\amara.jpg" width="180" height="120"
                 alt="Гостиница Amara Resort & Spa">
             </a>
-            <div>
+            <div class="catalog-card-param">
               <h3 class="catalog-card-title">Amara Resort & Spa</h3>
-              <span class="catalog-card-parametr catalog-card-type">Гостиница</span>
-              <span class="catalog-card-parametr catalog-card-price">От 4000 ₽</span>
-              <a href="#" class="catalog-card-details button-details">подробнее</a>
-              <a href="#" class="catalog-card-details button-favorites">В избранное</a>
+              <span class="catalog-card-type">Гостиница</span>
+              <span class="catalog-card-price">От 4000 ₽</span>
+              <div class="catalog-card-button">
+                <a href="#" class="catalog-card-details button-details">подробнее</a>
+                <a href="#" class="catalog-card-details button-favorites">В избранное</a>
+              </div>
             </div>
-            <div>
-              <div class="stars"></div>
+            <div class="catalog-item-rating">
+              <div class="stars">
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" />
+                </svg>
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" />
+                </svg>
+
+              </div>
               <span class="catalog-card-rating">Рейтинг: 8,5</span>
             </div>
           </li>
@@ -170,15 +191,25 @@
               <img class="catalog-card-image desert" src="images\hotels\desert-quail.jpg" width="180" height="120"
                 alt="Мотель Desert Quail Inn">
             </a>
-            <div>
+            <div class="catalog-card-param">
               <h3 class="catalog-card-title">Desert Quail Inn</h3>
-              <span class="catalog-card-parametr catalog-card-type">Мотель</span>
-              <span class="catalog-card-parametr catalog-card-price">От 3000 ₽</span>
-              <a href="#" class="catalog-card-details button-details">подробнее</a>
-              <a href="#" class="catalog-card-details button-favorites">В избранное</a>
+              <span class="catalog-card-type">Мотель</span>
+              <span class="catalog-card-price">От 3000 ₽</span>
+              <div class="catalog-card-button">
+                <a href="#" class="catalog-card-details button-details">подробнее</a>
+                <a href="#" class="catalog-card-details button-favorites">В избранное</a>
+              </div>
             </div>
-            <div>
-              <div class="stars"></div>
+            <div class="catalog-item-rating">
+              <div class="stars">
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" />
+                </svg>
+              </div>
               <span class="catalog-card-rating">Рейтинг: 8,9</span>
             </div>
           </li>
@@ -187,15 +218,22 @@
               <img class="catalog-card-image diablo" src="images\hotels\villas-at-poco.jpg" width="180" height="120"
                 alt="Апартаменты Villas at Poco Diablo">
             </a>
-            <div>
+            <div class="catalog-card-param">
               <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
-              <span class="catalog-card-parametr catalog-card-type">Апартаменты</span>
-              <span class="catalog-card-parametr catalog-card-price">От 2000 ₽</span>
-              <a href="#" class="catalog-card-details button-details">подробнее</a>
-              <a href="#" class="catalog-card-details button-favorites button-favorites-checked">В избранном</a>
+              <span class="catalog-card-type">Апартаменты</span>
+              <span class="catalog-card-price">От 2000 ₽</span>
+              <div class="catalog-card-button">
+                <a href="#" class="catalog-card-details button-details">подробнее</a>
+                <a href="#" class="catalog-card-details button-favorites button-favorites-checked">В избранном</a>
+              </div>
             </div>
-            <div>
-              <div class="stars"></div>
+            <div class="catalog-item-rating">
+              <div class="stars">
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+              </div>
               <span class="catalog-card-rating">Рейтинг: 9,2</span>
             </div>
           </li>
@@ -204,15 +242,22 @@
               <img class="catalog-card-image greentree" src="images\hotels\greentree.jpg" width="180" height="120"
                 alt="Гостиница GreenTree Inn">
             </a>
-            <div>
+            <div class="catalog-card-param">
               <h3 class="catalog-card-title">GreenTree Inn</h3>
-              <span class="catalog-card-parametr catalog-card-type">Гостиница</span>
-              <span class="catalog-card-parametr catalog-card-price">От 3000 ₽</span>
-              <a href="#" class="catalog-card-details button-details">подробнее</a>
-              <a href="#" class="catalog-card-details button-favorites">В избранное</a>
+              <span class="catalog-card-type">Гостиница</span>
+              <span class="catalog-card-price">От 3000 ₽</span>
+              <div class="catalog-card-button">
+                <a href="#" class="catalog-card-details button-details">подробнее</a>
+                <a href="#" class="catalog-card-details button-favorites">В избранное</a>
+              </div>
             </div>
-            <div>
-              <div class="stars"></div>
+            <div class="catalog-item-rating">
+              <div class="stars">
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+                <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3" /></svg>
+              </div>
               <span class="catalog-card-rating">Рейтинг: 9,2</span>
             </div>
           </li>
@@ -234,19 +279,7 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link clip" href="#">5</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link clip" href="#">6</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link clip" href="#">7</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link clip" href="#">8</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link clip" href="#">9</a>
+            <a class="pagination-link-clip" href="#">. . .</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
