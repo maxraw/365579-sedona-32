@@ -63,6 +63,7 @@ body {
   max-width: 400px;
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   margin: 0;
   margin-top: 7px;
   padding: 0;
@@ -78,7 +79,7 @@ body {
 .navigation-user {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-right: 19px;
   align-items: baseline;
   padding-left: 0;
@@ -114,9 +115,9 @@ body {
 .active::after {
   position: absolute;
   content: "";
-  top: 140%;
+  top: 139%;
   display: block;
-  width: calc(100% - 22px);
+  width: calc(100% - 17px);
   height: 2px;
   background-color: #756257;
 }
@@ -355,7 +356,7 @@ body {
 
 .description-title {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -454,7 +455,7 @@ body {
 
 .advantages-item-description {
   margin: auto;
-  margin-top: 30px;
+  margin-top: 31px;
   max-width: 216px;
   margin-left: 90px;
   font-weight: 400;
@@ -478,10 +479,20 @@ body {
 
 .housing-description {
   width: 172px;
+  padding-right: 3px;
+}
+
+.food-description {
+  padding-top: 2px;
+}
+
+.gifts-description {
+  padding-right: 3px;
+  padding-top: 1px;
 }
 
 .advantages-item-icon {
-  margin-top: 90px;
+  margin-top: 91px;
 }
 
 .gift-image {
@@ -494,7 +505,8 @@ body {
 
 .advantages-title-bridge {
   margin: 0;
-  padding-top: 96px;
+  padding-top: 97px;
+  padding-right: 2px;
   padding-bottom: 30px;
   font-weight: 700;
   font-size: 24px;
@@ -508,8 +520,8 @@ body {
 .advantages-title-road,
 .advantages-title-few {
   margin: 0;
-  padding-top: 96px;
-  padding-bottom: 30px;
+  padding-top: 98px;
+  padding-bottom: 29px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -520,7 +532,19 @@ body {
 
 .advantages-description {
   margin: 0;
-  margin-top: 30px;
+  margin-top: 29px;
+}
+
+.area-text-wrap {
+  display: block;
+  margin-left: 12px;
+  font-family: PT Sans, sans-serif;
+  font-style: 400;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
 }
 
 .search {
@@ -542,7 +566,16 @@ body {
 
 .search-description {
   margin: 0;
-  margin-top: 29px;
+  margin-top: 31px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+.search-text-wrap {
+  margin-right: 18px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -553,8 +586,10 @@ body {
 .search-button {
   margin-top: 59px;
   margin-bottom: 91px;
-  width: 575px;
-  height: 60px;
+  padding-top: 13px;
+  padding-left: 149px;
+  padding-right: 150px;
+  padding-bottom: 12px;
   background-color: #756257;
   border: none;
   border-radius: 10px;
@@ -612,7 +647,7 @@ body {
 .subscription-caption {
   margin: 0;
   padding: 0;
-  padding-top: 94px;
+  padding-top: 92px;
   font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -740,7 +775,7 @@ body {
 }
 
 .footer-social-item {
-  margin-top: 10px;
+  margin-top: 11px;
   margin-left: 19px;
   text-align: left;
   list-style-type: none;
@@ -748,7 +783,11 @@ body {
 }
 
 .footer-social-item:not(:first-child) {
-  margin-left: 3px;
+  margin-left: 5px;
+}
+
+.footer-social-item:nth-child(3) {
+  margin-left: 0;
 }
 
 .social-button {
@@ -772,7 +811,7 @@ body {
 
 .footer-tel {
   display: block;
-  margin-left: 11px;
+  margin-left: 17px;
   margin-top: -17px;
   padding: 15px;
   text-decoration: none;
@@ -906,7 +945,7 @@ body {
 
 .filter-group-radio {
   margin-top: 26px;
-  margin-left: -20px;
+  margin-left: -17px;
   margin-bottom: 73px;
 }
 
@@ -926,7 +965,26 @@ body {
 }
 
 .price-area {
+  display: block;
   padding-left: 0;
+}
+
+.price-range {
+  position: absolute;
+  margin-left: 100px;
+  padding-top: 10px;
+  padding-left: 13px;
+  color: rgba(248, 247, 244, 0.3);
+  font-family: PT Sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: right;
+}
+
+.price-range-max {
+  padding-left: 8px;
 }
 
 .filter-input-left,
@@ -970,6 +1028,10 @@ body {
 .filter-input-left:active,
 .filter-input-right:active {
   background: #756257;
+}
+
+.filter-input-left::placeholder {
+  color: red;
 }
 
 .range-controls {
@@ -1341,13 +1403,18 @@ body {
 .catalog-card {
   display: flex;
   justify-content: space-between;
-  margin: 30px;
+  margin-top: 0;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
   list-style-type: none;
   border-bottom: 1px solid #E6E6E6;
+}
+
+.catalog-card-link {
+  display: block;
+  margin-top: 30px;
 }
 
 .catalog-card-image {
@@ -1369,8 +1436,8 @@ body {
 
 .catalog-card-title {
   display: block;
+  width: 215px;
   margin: 0;
-  margin-top: -2px;
   padding: 0;
   font-weight: 700;
   font-size: 24px;
@@ -1384,7 +1451,7 @@ body {
 
 .catalog-card-title:focus {
   color: #756257;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -1395,12 +1462,17 @@ body {
   opacity: 0.3;
 }
 
-.catalog-card-price {
-  margin-left: 96px;
+.card-param-wrap {
+  display: flex;
+  width: 235px;
+  justify-content: space-between;
+  padding-top: 2px;
+  padding-bottom: 33px;
 }
 
 .catalog-card-param {
   flex: 1;
+  margin-top: 27px;
   margin-left: 37px;
   font-weight: 400;
   font-size: 18px;
@@ -1409,7 +1481,7 @@ body {
 }
 
 .catalog-card-button {
-  margin-top: 38px;
+  display: flex;
 }
 
 .catalog-card-details {
@@ -1417,9 +1489,9 @@ body {
 }
 
 .button-details {
-  width: 151px;
+  display: block;
   padding-top: 7px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   padding-left: 30px;
   padding-right: 33px;
   font-family: 'PT Sans', sans-serif;
@@ -1449,9 +1521,11 @@ body {
 }
 
 .button-favorites {
-  padding-top: 7px;
-  padding-bottom: 10px;
-  padding-left: 33px;
+  display: block;
+  margin-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  padding-left: 30px;
   padding-right: 30px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
@@ -1483,6 +1557,10 @@ body {
 }
 
 .button-favorites-checked {
+  padding-top: 7px;
+  padding-bottom: 9px;
+  padding-left: 28px;
+  padding-right: 27px;
   border: none;
   background-color: #7DB54F;
 }
@@ -1509,9 +1587,16 @@ body {
   align-items: center;
 }
 
-.stars {
-  margin-top: 2px;
-  margin-right: 2px;
+.stars-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-top: 33px;
+  list-style-type: none;
+}
+
+.stars-item:not(:last-child) {
+  margin-right: 7px;
 }
 
 .catalog-card-rating {
@@ -1534,11 +1619,11 @@ body {
   display: block;
   width: 625px;
   margin: auto;
-  margin-top: 31px;
+  margin-top: 33px;
   margin-bottom: 30px;
   padding: 0;
   padding-top: 13px;
-  padding-bottom: 11px;
+  padding-bottom: 14px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -1591,7 +1676,7 @@ body {
   box-sizing: border-box;
   width: 55px;
   height: 55px;
-  padding: 14px 20px;
+  padding: 14px 15px;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -1697,6 +1782,7 @@ body {
 .modal-content {
   width: 575px;
   margin: auto;
+  margin-right: 33px;
 }
 
 .modal-search {
@@ -1792,7 +1878,7 @@ body {
 .calendar::before {
   content: '';
   position: absolute;
-  bottom: 19px;
+  bottom: 15px;
   left: 95%;
   width: 15px;
   height: 15px;
@@ -1843,7 +1929,8 @@ body {
 }
 
 .param-adult {
-  margin-left: 73px;
+  margin-left: 74px;
+  margin-top: 2px;
 }
 
 .number-button {
@@ -1871,10 +1958,19 @@ body {
   opacity: 1;
 }
 
-
 .number-button:active {
   color: #000000;
   opacity: 0.2;
+}
+
+.minus {
+  margin-bottom: 5px;
+  margin-left: 11px;
+}
+
+.plus {
+  margin-top: 2px;
+  margin-right: 8px;
 }
 
 .input-group-number {
@@ -1897,7 +1993,8 @@ body {
 .modal-form-info {
   display: inline-block;
   position: relative;
-  margin-right: 20px;
+  margin-right: 18px;
+  margin-top: 5px;
   margin-left: 10px;
   background: #83B3D3;
   width: 25px;
@@ -1929,7 +2026,7 @@ body {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  padding: 22px 18px 18px 22px;
+  padding: 18px 18px 20px 23px;
   color: #FFF;
   border-radius: 10px;
 }
@@ -1942,12 +2039,13 @@ body {
 
 .modal-button {
   display: block;
-  width: 575px;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   border: none;
   border-radius: 10px;
   padding-top: 18px;
+  padding-left: 255px;
+  padding-right: 252px;
   padding-bottom: 18px;
   font-weight: 700;
   font-size: 20px;
