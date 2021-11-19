@@ -67,7 +67,7 @@
       <div class="favorite-window favorite-window-hide">
         <ul class="favorite-window-list">
           <li class="favorite-window-item">
-            <div class="favorite-window-wrapper">
+            <div class="favorite-window-wrapper" tabindex="0">
               <img class="favorite-window-image" src="images/hotels/desert-quail.jpg" width="48" height="48"
                 alt="Мотель Desert Quail Inn">
               <div class="favorite-window-description">
@@ -75,8 +75,8 @@
                 <span class="favorite-window-type">Мотель</span>
               </div>
             </div>
-            <div class="favorite-window-delete">
-              <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="favorite-window-delete" tabindex="0">
+              <svg class="delete-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M15.3 2.3H.6c-.3 0-.6.2-.6.5s.3.6.6.6h1.7v12c0 .3.3.6.6.6h10.2c.3 0 .6-.3.6-.6v-12h1.7c.3 0 .6-.3.6-.6s-.4-.5-.7-.5Zm-2.8 12.5H3.4V3.4h9.1v11.4ZM6.2 1.2h3.4c.3 0 .6-.3.6-.6S10 0 9.7 0H6.2c-.3 0-.5.3-.5.6s.2.6.5.6Z"
                   fill="#000" />
@@ -86,7 +86,7 @@
             </div>
           </li>
           <li class="favorite-window-item">
-            <div class="favorite-window-wrapper">
+            <div class="favorite-window-wrapper" tabindex="0">
               <img class="favorite-window-image" src="images/hotels/villas-at-poco.jpg" width="48" height="48"
                 alt="Мотель Desert Quail Inn">
               <div class="favorite-window-description">
@@ -94,8 +94,8 @@
                 <span class="favorite-window-type">Апартаменты</span>
               </div>
             </div>
-            <div class="favorite-window-delete">
-              <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="favorite-window-delete" tabindex="0">
+              <svg class="delete-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M15.3 2.3H.6c-.3 0-.6.2-.6.5s.3.6.6.6h1.7v12c0 .3.3.6.6.6h10.2c.3 0 .6-.3.6-.6v-12h1.7c.3 0 .6-.3.6-.6s-.4-.5-.7-.5Zm-2.8 12.5H3.4V3.4h9.1v11.4ZM6.2 1.2h3.4c.3 0 .6-.3.6-.6S10 0 9.7 0H6.2c-.3 0-.5.3-.5.6s.2.6.5.6Z"
                   fill="#000" />
@@ -105,7 +105,7 @@
             </div>
           </li>
         </ul>
-        <button href="#" class="favorite-window-button button" type="button">Все избранные</button>
+        <button class="favorite-window-button button" type="button">Все избранные</button>
       </div>
     </header>
     <main class="main-index">
@@ -183,7 +183,8 @@
       </section>
       <section class="subscription subscription-index">
         <h2 class="subscription-caption">Подпишитесь на рассылку</h2>
-        <p class="subscription-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        <p class="subscription-description-index">Только полезная информация и никакого
+          спама,<br>честное бойскаутское!</p>
         <form class="subscription-form" action="#" method="post">
           <label class="visually-hidden" for="subscription-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"

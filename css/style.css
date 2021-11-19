@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: #E5E5E5;
@@ -64,7 +64,7 @@ body {
 .navigation-user {
   display: flex;
   justify-content: flex-end;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-right: 19px;
   align-items: baseline;
   padding-left: 0;
@@ -161,11 +161,10 @@ body {
   margin-top: 13px;
   width: 160px;
   height: 37px;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  letter-spacing: -1.5px;
   text-align: center;
   text-transform: uppercase;
   background-color: #756257;
@@ -197,7 +196,7 @@ body {
   right: 103px;
   z-index: 2;
   box-sizing: border-box;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   display: flex;
   flex-direction: column;
   border: none;
@@ -217,19 +216,38 @@ body {
 .favorite-window-item {
   display: flex;
   justify-content: space-between;
-  padding-top: 25px;
-  padding-left: 24px;
-  padding-right: 25px;
+  margin-top: 14px;
+  margin-right: 15px;
+  margin-left: 15px;
   align-items: center;
   list-style-type: none;
 }
 
 .favorite-window-item:last-child {
-  padding-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 11px;
 }
 
 .favorite-window-wrapper {
   display: flex;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 14px;
+  padding-left: 10px;
+}
+
+.favorite-window-wrapper:hover {
+  opacity: 0.6;
+}
+
+.favorite-window-wrapper:focus {
+  outline: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.favorite-window-wrapper:active {
+  opacity: 0.3;
 }
 
 .favorite-window-image {
@@ -243,6 +261,7 @@ body {
 .favorite-window-title {
   margin: 0;
   padding: 0;
+  padding-top: 2px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -256,9 +275,29 @@ body {
   color: #333333;
 }
 
+.delete-icon {
+  padding: 10px;
+  opacity: 0.2;
+}
+
 .favorite-window-delete {
   margin-left: 25px;
   margin-bottom: 15px;
+}
+
+.delete-icon:hover {
+  fill: #000000;
+  opacity: 1;
+}
+
+.favorite-window-delete:focus {
+  outline: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.favorite-window-delete:active {
+  opacity: 0.3;
 }
 
 .favorite-window-button {
@@ -440,9 +479,9 @@ body {
 
 .advantages-item-description {
   margin: auto;
-  margin-top: 31px;
+  margin-top: 30px;
   max-width: 216px;
-  margin-left: 90px;
+  margin-left: 91px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -477,7 +516,7 @@ body {
 }
 
 .advantages-item-icon {
-  margin-top: 91px;
+  margin-top: 89px;
 }
 
 .gift-image {
@@ -490,7 +529,7 @@ body {
 
 .advantages-title-bridge {
   margin: 0;
-  padding-top: 97px;
+  padding-top: 95px;
   padding-right: 2px;
   padding-bottom: 30px;
   font-weight: 700;
@@ -505,7 +544,7 @@ body {
 .advantages-title-road,
 .advantages-title-few {
   margin: 0;
-  padding-top: 98px;
+  padding-top: 96px;
   padding-bottom: 29px;
   font-weight: 700;
   font-size: 24px;
@@ -523,9 +562,9 @@ body {
 .area-text-wrap {
   display: block;
   margin-left: 12px;
-  font-family: PT Sans, sans-serif;
-  font-style: 400;
-  font-weight: normal;
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -551,7 +590,7 @@ body {
 
 .search-description {
   margin: 0;
-  margin-top: 31px;
+  margin-top: 28px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -570,7 +609,7 @@ body {
 
 .search-button {
   margin-top: 59px;
-  margin-bottom: 91px;
+  margin-bottom: 90px;
   padding-top: 13px;
   padding-left: 149px;
   padding-right: 150px;
@@ -613,7 +652,7 @@ body {
 }
 
 .subscription-index {
-  padding-bottom: 93px;
+  padding-bottom: 94px;
 }
 
 .subscription-catalog {
@@ -656,12 +695,25 @@ body {
   color: #000000;
 }
 
-.subscription-description {
+.subscription-description-index {
   margin: 0;
   margin-top: 29px;
-  font-family: PT Sans, sans-serif;
+  font-family: 'PT Sans',
+  sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.subscription-description-catalog {
+  margin: 0;
+  margin-top: 29px;
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -671,7 +723,7 @@ body {
 .subscription-form {
   display: flex;
   justify-content: center;
-  margin-top: 47px;
+  margin-top: 48px;
 }
 
 .field {
@@ -760,7 +812,7 @@ body {
 }
 
 .footer-social-item {
-  margin-top: 11px;
+  margin-top: 9px;
   margin-left: 19px;
   text-align: left;
   list-style-type: none;
@@ -960,7 +1012,7 @@ body {
   padding-top: 10px;
   padding-left: 13px;
   color: rgba(248, 247, 244, 0.3);
-  font-family: PT Sans, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1321,7 +1373,7 @@ body {
 .select-control-value {
   font-family: 'PT Sans', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   color: #333333;
@@ -1777,7 +1829,7 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 20px;
-  top: 55px;
+  top: 53px;
   right: 73px;
   width: 53px;
   height: 53px;
